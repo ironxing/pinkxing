@@ -28,10 +28,11 @@ def wanttocontinue():
 score = 0
 play = True
 while play:
-    print("Let's play a game!")
-    print("I will be thinking about an integer number between 1-10.")
-    print("You can guess it 3 times, if you get it right, you will get 1 point.")
-    print("Let's start!")
+    starttext = """ Let's play a game!
+    I will be thinking about an integer number between 1-10.
+    You can guess it 3 times, if you get it right, you will get 1 point.
+    Let's start!
+    """
 
     game(score)
     play = wanttocontinue()
