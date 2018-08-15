@@ -8,14 +8,6 @@ while go_on:
         break
     hobbies.append(hobby)
 
-hobbies_string = ""
-
-for hobby in hobbies:
-    if not hobbies_string:  # dd
-        hobbies_string = hobby
-    else:
-        hobbies_string += ", " + hobby
-
-print("Okay. Hobbies are " + hobbies_string + ".")
+print("Okay. Hobbies are " + ', '.join(hobbies) + ".")
 
 
