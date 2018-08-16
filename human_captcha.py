@@ -29,7 +29,7 @@ for i in range(digit_sequence_length):
     digits_equal = ckeck_match(number1, number2)
 
     if digits_equal:
-        sum += 1
+        sum += number1
 
 print("The sum is: " + str(sum))
 

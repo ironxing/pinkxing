@@ -1,29 +1,41 @@
 operations = ["Add", "Subtract", "Divide", "Multiply"]
 
+
+def is_number(raw_input):
+    try:
+        float(raw_input)
+        return True
+    except ValueError:
+        return False
+
+
 go_on = True
 while go_on:
     operation = input("Please select a type of calculation: Add/Subtract/Divide/Multiply").capitalize()
 
     if operation in operations:
-        try:
-            first_number = float(input("Please input the first number:"))
-        except ValueError:
-            print("Please input a number.")
-            continue
+        number_input1 = ""
+        number_input2 = ""
 
-        try:
-            second_number = float(input("Please input the second number:"))
-        except ValueError:
-            print("Please input a number.")
+        number_input1 = input("Please input the first number:")
+        while not(is_number(number_input1)):
+            number_input1 = input("The input is not a number, please try again. Please input the first number:")
+
+        number_input2 = input("Please input the first number:")
+        while not(is_number(number_input2)):
+            number_input2 = input("The input is not a number, please try again. Please input the second number:")
+
+        number1 = float(number_input1)
+        number2 = float(number_input2)
 
         if operation == "Add":
-            print(first_number + second_number)
+            print("Result: " + str(round(number1 + number2, 2)))
         elif operation == "Subtract":
-            print(first_number - second_number)
+            print("Result: " + str(round(number1 - number2, 2)))
         elif operation == "Divide":
-            print(first_number / second_number)
+            print("Result: " + str(round(number1 / number2, 2)))
         else:
-            print(first_number * second_number)
+            print("Result: " + str(round(number1 * number2, 2)))
 
         go_on = False
     else:
@@ -32,6 +44,4 @@ while go_on:
 
 
 
-
-("I do not understand, can you select the calculation from the list? Add/Subtract/Divide/Multiply")
 
