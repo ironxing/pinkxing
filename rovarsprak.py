@@ -5,7 +5,7 @@ def rovarsprak(input):
         if input.lower() not in vowel:
             return input + "o" + input
         else:
-            return input
+            return input 
     else:
         if input[0].lower() not in vowel:
             return input[0] + "o" + input[0] + rovarsprak(input[1:])
