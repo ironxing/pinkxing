@@ -1,13 +1,16 @@
-def check_word(word, on_screen_string):
-    if word == on_screen_string:
-        return True
+
+
+def number_get_bigger2(n):
+    if n == 1:
+        return n
     else:
-        return False
+        return n * number_get_bigger2(n-1)
 
+def number_get_bigger3(n):
+    if n == 1:
+        return 6
+    else:
+        return 10+number_get_bigger3(n-1)
 
-
-word = "Apple".upper()
-on_screen = ["A", "P", "P", "L", "E"]
-on_screen_string = on_screen_string(on_screen)
-all_right = check_word(word, on_screen_string)
-print(all_right)
+a = number_get_bigger2(3)
+print(a)
